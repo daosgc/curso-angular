@@ -1,0 +1,9 @@
+<input class="tareas-input" type="text" [(ngModel)]="tarea">
+
+<button (click)="onSubmit()">Agregar</button>
+
+<div class="lista-tareas-container" *ngIf="listaTareas.length">
+  <div class="tarea-item" *ngFor="let task of listaTareas">
+    {{task}}
+  </div>
+</div>
