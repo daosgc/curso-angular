@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
-import { ITask } from '../modelo/tarea.interface';
-import { TransformarKey } from '../constantes/constantes.const';
+import { ITask } from '../../modelo/tarea.interface';
+import { TransformarKey } from '../../constantes/constantes.const';
 
 @Component({
   selector: 'app-task',

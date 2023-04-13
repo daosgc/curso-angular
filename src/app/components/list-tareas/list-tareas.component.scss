@@ -1,4 +1,13 @@
-@import "../styles/common.scss";
+@import "../../styles/common.scss";
+.header {
+  width: 100%;
+  padding: 0rem 1rem;
+
+  mat-form-field {
+    width: 80%;
+    padding-right: 1rem;
+  }
+}
 
 .tareas-input {
   color: $violet-color;
@@ -17,14 +26,9 @@
     padding: $padding-s;
     color: red;
     font-size: $font-medium;
-    border-bottom: 1px solid gray;
 
     &.visible {
       color: green;
-    }
-
-    &:last-child {
-      border-bottom: 0px;
     }
   }
 }

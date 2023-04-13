@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITask } from '../modelo/tarea.interface';
+import { ITask } from '../../modelo/tarea.interface';
 
 @Component({
   selector: 'app-list-tareas',

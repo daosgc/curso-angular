@@ -1,0 +1,8 @@
+<div class="task-content">
+  <div class="task">
+    <span appResaltar>{{tarea.name | transformarTxt: transformarMay}}</span>
+    <span class="date">{{tarea.date | date: 'EEEE, h:mm:ss a'}}</span>
+  </div>
+  <button mat-stroked-button color="primary" (click)="onRemove()">Completado</button>
+</div>
+

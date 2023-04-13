@@ -1,0 +1,29 @@
+<div class="header">
+  <mat-form-field class="example-form-field">
+    <mat-label>Nombre de la tarea</mat-label>
+    <input matInput type="text" [(ngModel)]="tarea.name">
+    <button *ngIf="tarea.name" matSuffix mat-icon-button aria-label="Clear" (click)="tarea.name=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!tarea.name">Agregar</button>
+</div>
+
+<div class="lista-tareas-container" *ngIf="listaTareas.length; else emptyState">
+  <div *ngFor="let task of listaTareas; let i = index">
+    <app-task
+      class="tarea-item"
+      [tarea]="task"
+      [class.visible]="task.visible"
+      [ngStyle]="{'font-size': task.visible ? '15px' : '14px'}"
+      (remove)="onRemoveAction($event)"
+      >
+    </app-task>
+    <mat-divider></mat-divider>
+  </div>
+</div>
+
+<ng-template #emptyState>
+  Aun no tienes tareas, por favor agregar una.
+</ng-template>
