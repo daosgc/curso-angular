@@ -15,9 +15,13 @@
 
   .tarea-item {
     padding: $padding-s;
-    color: $violet-color;
+    color: red;
     font-size: $font-medium;
     border-bottom: 1px solid gray;
+
+    &.visible {
+      color: green;
+    }
 
     &:last-child {
       border-bottom: 0px;

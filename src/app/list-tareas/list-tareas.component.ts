@@ -7,16 +7,37 @@ import { ITask } from '../modelo/tarea.interface';
   styleUrls: ['./list-tareas.component.scss']
 })
 export class ListTareasComponent implements OnInit {
-  tarea: string = '';
-  listaTareas: string[] = ['Primera Tarea'];
+  tarea: ITask;
+  listaTareas: ITask[] = [];
 
-  constructor() {}
+  constructor() {
+    this.tarea = {
+      id: 0,
+      name: '',
+      visible: true,
+    };
+  }
 
   ngOnInit(): void {}
 
   onSubmit() {
+    this.tarea = {
+      ...this.tarea,
+      id: Math.floor((Math.random() * (100 - 0 + 1)) + 0),
+      visible: this.tarea.name.includes('tarea'),
+      date: new Date().valueOf()
+    };
+
     this.listaTareas.push(this.tarea);
-    this.tarea = '';
+    this.tarea = {
+      id: 0,
+      name: '',
+      visible: true
+    };
+    console.log('this.listaTareas', this.listaTareas);
   }
 
+  onRemoveAction(id: number) {
+    this.listaTareas = this.listaTareas.filter((t: ITask) => t.id !== id);
+  }
 }
