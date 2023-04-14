@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit(formProduct)" #formProduct="ngForm">
+  <label for="name">Nombre</label>
+  <input type="text" ngModel name="name" #name="ngModel" required minlength="5">
+  <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+    <div *ngIf="name.errors && name.errors['required']">Name is required.</div>
+    <div *ngIf="name.errors && name.errors['minlength']">Name is minimum {{ name.errors && name.errors['minlength'].requiredLength }} character.</div>
+  </div>
+
+  <label for="price">Precio</label>
+  <input type="number" ngModel name="price" #price="ngModel">
+  <button type="submit" [disabled]="!formProduct.valid">Guardar</button>
+</form>

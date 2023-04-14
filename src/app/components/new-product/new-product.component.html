@@ -1,0 +1,10 @@
+<button mat-raised-button color="primary" (click)="showForm()">Nuevo</button>
+<div class="products-container">
+  <app-form-reactive *ngIf="isNew"
+    [editMode]="editMode"
+    [product]="editedProduct"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  ></app-form-reactive>
+  <app-products-table [tableData]="productos" (editAction)="onEditProduct($event)"></app-products-table>
+</div>
