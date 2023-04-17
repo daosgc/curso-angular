@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITask } from '../../modelo/tarea.interface';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-list-tareas',
@@ -10,12 +11,15 @@ export class ListTareasComponent implements OnInit {
   tarea: ITask;
   listaTareas: ITask[] = [];
 
-  constructor() {
+  constructor(
+    private readonly utils: UtilsService
+  ) {
     this.tarea = {
       id: 0,
       name: '',
       visible: true,
     };
+    console.log('tareas', this.utils.getData());
   }
 
   ngOnInit(): void {}

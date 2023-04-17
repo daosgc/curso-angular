@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/modelo/producto.interface';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-new-product',
@@ -12,9 +13,12 @@ export class NewProductComponent implements OnInit {
   editMode = false;
   editedProduct: IProduct = { id: 0, name: '', price: 0};
 
-  constructor() { }
+  constructor(
+    private readonly utils: UtilsService,
+  ) { }
 
   ngOnInit(): void {
+    this.productos = this.utils.getData();
   }
 
   onSave(product: IProduct) {

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DirectivasModule } from '../directivas/directivas.module';
 import { PipesModule } from '../pipes/pipes.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { ListTareasComponent } from './list-tareas/list-tareas.component';
 import { TaskComponent } from './task/task.component';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
@@ -23,7 +22,6 @@ import { NewProductComponent } from './new-product/new-product.component';
   ],
   imports: [
     AngularMaterialModule,
-    BrowserModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
