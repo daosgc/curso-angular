@@ -15,7 +15,7 @@ export class ResaltarDirective {
     this.highlight('');
   }
 
-  private highlight(color: string) {
+  highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
   }
 
