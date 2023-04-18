@@ -9,7 +9,8 @@ export class TasksGuard implements CanActivateChild {
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return childRoute.queryParams?.valid === 'true';;
+    // return childRoute.queryParams?.valid === 'true';;
+    return true;
   }
 
 }

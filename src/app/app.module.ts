@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { UtilsService } from './services/utils.service';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     ComponentsModule,
     NoopAnimationsModule,
     HttpClientModule,
+    AngularMaterialModule,
   ],
-  providers: [],
+  providers: [UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

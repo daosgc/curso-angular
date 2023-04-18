@@ -1,2 +1,12 @@
-<h1 class="title">Curso de Angular</h1>
+<div class="header">
+  <h1 class="title">Curso de Angular</h1>
+
+  <div class="nav-items">
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let link of links"
+         (click)="goToRoute(link)"
+         [active]="activeLink == link.path"> {{link.label}} </a>
+    </nav>
+  </div>
+</div>
 <router-outlet></router-outlet>
