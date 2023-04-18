@@ -1,0 +1,14 @@
+.item-card {
+  width: 20rem;
+  margin: 10px;
+
+  .item-image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+mat-card-image {
+  width: 15rem;
+}

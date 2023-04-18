@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span>Mi tienda</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button (click)="openCartPanel()">
+    <mat-icon>shopping_cart_checkout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="dasboard-container">
+  <div class="grid">
+    <mat-grid-list cols="2" rowHeight="2:2" *ngIf="items$ | async as items">
+      <mat-grid-tile *ngFor="let item of items">
+        <app-item-card [item]="item" (addItem)="onAddItemCart($event)">
+        </app-item-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div class="cart-panel" *ngIf="showCartPanel &&itemsCart.length">
+    <app-cart-panel
+      [itemsCart]="itemsCart"
+      (checkout)="onCheckout()"
+      (delete)="onDelete()"
+    >
+    </app-cart-panel>
+  </div>
+</div>

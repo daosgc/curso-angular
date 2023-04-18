@@ -5,13 +5,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 const modules = [
   MatButtonModule,
   MatInputModule,
   MatIconModule,
   MatDividerModule,
-  MatTableModule
+  MatTableModule,
+  MatCardModule,
+  MatGridListModule,
+  MatToolbarModule,
 ];
 
 @NgModule({

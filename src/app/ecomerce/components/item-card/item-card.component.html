@@ -1,0 +1,21 @@
+<mat-card class="item-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{item?.title}}</mat-card-title>
+    <mat-card-subtitle>${{item?.price}}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="item-image-content">
+    <img [src]="item?.image" width="150" alt="image_product">
+  </div>
+  <mat-card-content>
+    <p>
+      {{item?.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <input type="number" min="1" [(ngModel)]="totalProducts">
+    <button mat-raised-button color="primary" (click)="onAddItem()">
+      Añadir
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,17 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.dasboard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .grid {
+    width: 80%;
+  }
+
+  .cart-panel {
+    width: 20%;
+  }
+}

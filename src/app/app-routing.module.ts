@@ -12,6 +12,15 @@ const routes: Routes = [
   {
     path: 'tasks',
     loadChildren: () => import('./task-view/task-view.module').then((m) => m.TaskViewModule),
+  },
+  {
+    path: 'store',
+    loadChildren: () => import('./ecomerce/ecomerce.module').then((m) => m.EcomerceModule)
+  },
+  {
+    redirectTo: 'store',
+    pathMatch: 'full',
+    path: '',
   }
 ];
 
