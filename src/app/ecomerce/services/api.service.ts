@@ -18,7 +18,7 @@ export class ApiService {
   }
 
   addCart(cart: ICart): Observable<ICart> {
-    return this.http.post<any>(`${this.apiUrl}/carts`, cart);
+    return this.http.post<any>(`${this.apiUrl}/cartss`, cart);
   }
 
   updateCart(cartId: string, editedCart: ICart): Observable<ICart> {
