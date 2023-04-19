@@ -8,8 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage",
     "e2e": "ng e2e",
+    "e2e:headless": "ng e2e --browser=chrome --headless --watch=false",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {

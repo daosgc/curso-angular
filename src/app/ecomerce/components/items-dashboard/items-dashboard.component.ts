@@ -39,7 +39,7 @@ export class ItemsDashboardComponent implements OnInit, OnDestroy {
     })
     const payloadCart: ICart = {
       userId: 5,
-      date: new Date().toString(),
+      date: 'Wed Apr 19 2023 16:40:19 GMT-0500 (Ecuador Time)',
       products: products
     };
     this.api.addCart(payloadCart).pipe(takeUntil(this.destroy$)).subscribe({
