@@ -10,6 +10,7 @@ import { FormTemplateComponent } from './form-template/form-template.component';
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { ProductsTableComponent } from './products-table/products-table.component';
 import { NewProductComponent } from './new-product/new-product.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NewProductComponent } from './new-product/new-product.component';
     FormReactiveComponent,
     ProductsTableComponent,
     NewProductComponent,
+    LoginFormComponent,
   ],
   imports: [
     AngularMaterialModule,
@@ -34,7 +36,8 @@ import { NewProductComponent } from './new-product/new-product.component';
     FormTemplateComponent,
     FormReactiveComponent,
     ProductsTableComponent,
-    NewProductComponent
+    NewProductComponent,
+    LoginFormComponent
   ]
 })
 export class ComponentsModule { }
