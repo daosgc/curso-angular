@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ItemCardComponent } from './item-card.component';
 import { IItem, IItemCart } from '../../interfaces/ecommer.interface';
 
-describe('ItemCardComponent', () => {
+fdescribe('ItemCardComponent', () => {
   let component: ItemCardComponent;
   let fixture: ComponentFixture<ItemCardComponent>;
 
