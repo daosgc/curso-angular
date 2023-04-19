@@ -54,6 +54,7 @@ export class ItemsDashboardComponent implements OnInit, OnDestroy {
   }
 
   onDelete() {
+    console.error('testing an error on delete');
     this.api.deleteCart('5').pipe(takeUntil(this.destroy$)).subscribe({
       next: (resp) => {
         console.log('on success', resp);
