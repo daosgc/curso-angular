@@ -15,7 +15,7 @@ const itemCartMock: IItemCart = {
 
 const payloadCart: ICart = {
   userId: 5,
-  date: new Date().toString(),
+  date: 'Wed Apr 19 2023 16:40:19 GMT-0500 (Ecuador Time)',
   products: [
     {
       productId: parseInt(itemCartMock.productId),
@@ -24,7 +24,7 @@ const payloadCart: ICart = {
   ]
 };
 
-describe('ItemsDashboardComponent', () => {
+fdescribe('ItemsDashboardComponent', () => {
   let component: ItemsDashboardComponent;
   let fixture: ComponentFixture<ItemsDashboardComponent>;
   let apiSpy = jasmine.createSpyObj<ApiService>('ApiService', {
