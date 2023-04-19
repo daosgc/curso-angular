@@ -1,18 +1,19 @@
 <div class="header">
   <mat-form-field class="example-form-field">
     <mat-label>Nombre de la tarea</mat-label>
-    <input matInput type="text" [(ngModel)]="tarea.name">
+    <input matInput type="text" [(ngModel)]="tarea.name" data-cy="taskInput">
     <button *ngIf="tarea.name" matSuffix mat-icon-button aria-label="Clear" (click)="tarea.name=''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!tarea.name">Agregar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!tarea.name" data-cy="taskButton">Agregar</button>
 </div>
 
 <div class="lista-tareas-container" *ngIf="listaTareas.length; else emptyState">
   <div *ngFor="let task of listaTareas; let i = index">
     <app-task
+      data-cy="taskItem"
       class="tarea-item"
       [tarea]="task"
       [class.visible]="task.visible"
